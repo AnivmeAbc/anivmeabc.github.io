@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        body { background: #121212; color: white; font-family: sans-serif; text-align: center; }
+        .card { background: #1e1e1e; margin: 10px; padding: 15px; border-radius: 15px; }
+        img { width: 100px; border-radius: 50%; }
+        button { background: #ff4081; color: white; border: none; padding: 10px 20px; border-radius: 20px; }
+    </style>
+</head>
+<body>
+    <h2>Выбери историю</h2>
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Saki">
+        <h3>Саки</h3>
+        <p>Твоя половинка</p>
+        <button onclick="selectWaifu('Saki')">Играть</button>
+    </div>
+    <div class="card">
+        <img src="https://via.placeholder.com/100" alt="Maya">
+        <h3>Майя</h3>
+        <p>Игривая сестра</p>
+        <button onclick="selectWaifu('Maya')">Играть</button>
+    </div>
+
+    <script>
+        let tg = window.Telegram.WebApp;
+        tg.expand();
+
+        function selectWaifu(id) {
+            // Здесь можно отправить запрос на сервер для смены персонажа
+            tg.close();
+        }
+    </script>
+</body>
+</html>
